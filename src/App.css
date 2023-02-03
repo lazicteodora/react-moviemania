@@ -117,3 +117,178 @@ a{
 ::placeholder{
   color:  white;
 }
+
+/* css za pocetnu stranicu*/
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home, .onama{
+  background-image: url("https://media.istockphoto.com/id/1001928086/photo/spotlight-on-purple-movie-theater-curtains-background.jpg?s=612x612&w=0&k=20&c=ZanraCc8vGR_5XJnlrKuaIVtyGbYkaA03R3SjdJ1ph4=");
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+}
+
+h2{
+  padding-top: 10px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  padding-left: 60px;
+  text-align: center;
+}
+.box {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 20px;
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+  width: 800px;
+}
+
+h3{
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-family: 'Caramel', cursive;
+  text-align: center;
+}
+
+h4{
+  font-size: 20px;
+  text-align: justify;
+  padding-left: 200px;
+}
+
+
+  /* za tri diva */
+  .flex-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    background: rgb(43,41,78);
+    background: linear-gradient(90deg, #610C63 0%,#810955  35%, #610C63 100%);
+    justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 85%;
+
+  }
+
+  .flex-container > div {
+    background-color: #f1f1f1;
+    width: 90%;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    background-color: transparent;
+    padding-bottom: 50px;
+  }
+
+   /* css za Footer */
+   .footer-container {
+    background-color: #EE81B3;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  }
+
+  .footer-text {
+    text-align: center;
+    color: #fff;
+   padding-bottom: 10px;
+   padding-top: 10px;
+    margin: 8px;
+
+  }
+
+  .SlikaHome {
+    margin-left:-65px;
+    height: 700px;
+    width: 1360px;
+  }
+
+  /*naslov home css*/
+  .home-text {
+    position: relative;
+    transition: transform 0.2s;
+    text-align: center;
+    margin-left: 470px;
+    margin-right: 470px;
+    color: white;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .home-text:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 100%;
+    border-radius: 50% 0% 50% 0%;
+    background-color: rgba(255, 249, 215, 0);
+    transition: all 0.5s;
+    z-index: -1;
+  
+  }
+
+  .home-text:hover:after {
+    width: 100%;
+    background-color: rgb(238, 129, 179);
+  }
+  .home-text:hover {
+    transform: scale(1.1);
+  
+  }
+
+  /*naslov o nama css*/
+
+  .onama-text {
+    position: relative;
+    transition: transform 0.2s;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    color: white;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .onama-text:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0%;
+    height: 100%;
+    border-radius: 50% 0% 50% 0%;
+    background-color: rgba(255, 249, 215, 0);
+    transition: all 0.5s;
+    z-index: -1;
+  
+  }
+
+  .onama-text:hover:after {
+    width: 100%;
+    background-color: rgb(238, 129, 179);
+  }
+  .onama-text:hover {
+    transform: scale(1.1);
+  
+  }
