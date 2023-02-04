@@ -10,10 +10,6 @@ function Home() {
 
       <br /><br /><br /><br /><br />
       <div className="flex-container">
-          <div className="home-slika">
-            <img src="https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQQ6ILMVwPGcdGDQWBn98lpz1TIxcUWbVbzvDYgW-85cK4twvzh-nrX32TUH13AAye5OGjNcN4qXapC-NJHSiSvQHYKRChXqgmUwOLK1e3FxT0UkLNrE67oIV-ZqeDuFuDP0fz5uFQtbs7c-asnahUPWFMeQ.jpg?r=429" alt="film" className="SlikaHome" />
-          </div>
-
           <div className="Home-paragraf">
               <h2>Zadatak:</h2>
               <p> Dobrodošli na MovieMania, vaše krajnje odredište za sve filmove! Naša veb stranica je 

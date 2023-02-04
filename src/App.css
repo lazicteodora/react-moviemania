@@ -3,7 +3,7 @@
 }
 /* css za navigacioni meni */
 .nav {
-  background: rgb(129, 9, 85); opacity: 0.8;
+  background: linear-gradient(90deg, #610C63 0%,#810955  35%, #610C63 100%); opacity: 0.8;
   color:white;
 	position: sticky;
   margin: auto !important;
@@ -48,7 +48,7 @@ h1:hover {
 
 
 .nav__item__search{
-  background: rgb(129, 9, 85);
+  background: none;
   display: inline-block;
   margin: 0px 30px;
   color: white;
@@ -64,7 +64,7 @@ a{
   transition: transform 0.2s;
   display: inline-block;
   padding: 10px 20px;
-  background: rgb(129, 9, 85);
+  background: none;
   display: inline-block;
   margin: 0px 30px;
   color: white;
@@ -124,8 +124,8 @@ body, html {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.home, .onama{
-  background-image: url("https://media.istockphoto.com/id/1001928086/photo/spotlight-on-purple-movie-theater-curtains-background.jpg?s=612x612&w=0&k=20&c=ZanraCc8vGR_5XJnlrKuaIVtyGbYkaA03R3SjdJ1ph4=");
+.home, .onama, .row{
+  background-image: url("https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQQ6ILMVwPGcdGDQWBn98lpz1TIxcUWbVbzvDYgW-85cK4twvzh-nrX32TUH13AAye5OGjNcN4qXapC-NJHSiSvQHYKRChXqgmUwOLK1e3FxT0UkLNrE67oIV-ZqeDuFuDP0fz5uFQtbs7c-asnahUPWFMeQ.jpg?r=429");
 
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -210,11 +210,6 @@ h4{
 
   }
 
-  .SlikaHome {
-    margin-left:-65px;
-    height: 700px;
-    width: 1360px;
-  }
 
   /*naslov home css*/
   .home-text {
@@ -292,3 +287,60 @@ h4{
     transform: scale(1.1);
   
   }
+
+   /* css za kartice restorana*/
+   .row{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+	  justify-content: space-evenly;
+
+  }
+
+
+  .card-img-top{
+    height: 500px;
+    width: 400px;
+
+  }
+
+  .card {
+    border: rgb(238, 129, 179);
+    border-radius: 15px;
+    inline-size: 400px;
+    overflow: hidden;
+    background-color: #ecb9cd;
+
+  }
+
+  .card:hover {
+    transform: scale(1.04);
+
+  }
+
+  .card-title {
+    font-size: 29px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: -10px;
+    margin-top: -7px;
+    background-color: #810955;
+    padding-bottom: 7px;
+    padding-top: 5px;
+
+  }
+
+  .card-text {
+    text-align: justify;
+    font-weight: bold;
+    color: #610C63;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -20px;
+    line-height: 40px;
+
+  }
+
+
+  /*kasnije dodati jos css za dugme dodaj*/
