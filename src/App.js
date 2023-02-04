@@ -6,8 +6,11 @@ import Footer from './components/Footer';
 import ONama from './components/ONama';
 import Filmovi from './components/Filmovi';
 import { useState } from 'react';
+import ListaGledanja from './components/ListaGledanja';
 
 function App() {
+
+  const [listaFilmova,setListaF]=useState([]);
   const[sviFilmovi] = useState([
 
     {
@@ -18,6 +21,7 @@ function App() {
         producent:"Lorne Michaels",
         glavneUloge: "Lindsay Lohan, Rachel McAdams, and Tina Fey",
         zanr: "Teen comedy",
+        lista: 0
     },
     {
       id:2,
@@ -27,6 +31,7 @@ function App() {
       producent:"Marc E. Platt",
       glavneUloge: "Reese Witherspoon, Luke Wilson, and Selma Blair",
       zanr: "Romantic comedy",
+      lista: 0
     },
     {
       id:3,
@@ -36,6 +41,7 @@ function App() {
       producent:"Debra Martin Chase",
       glavneUloge: "Anne Hathaway, Julie Andrews, and Hector Elizondo",
       zanr: "Romantic comedy",
+      lista: 0
     },
     {
       id:4,
@@ -45,6 +51,7 @@ function App() {
       producent:"Amy Pascal",
       glavneUloge: "Saoirse Ronan, Emma Watson, and Florence Pugh",
       zanr: "Drama",
+      lista: 0
     },
     {
       id:5,
@@ -54,6 +61,7 @@ function App() {
       producent:"Matt Kaplan",
       glavneUloge: "Lana Condor, Noah Centineo, and Janel Parrish",
       zanr: "Romance",
+      lista: 0
     },
     {
       id:6,
@@ -63,6 +71,7 @@ function App() {
       producent:"Nina Jacobson",
       glavneUloge: "Constance Wu, Henry Golding, and Awkwafina",
       zanr: "Romantic comedy",
+      lista: 0
     },
     {
       id:7,
@@ -72,6 +81,7 @@ function App() {
       producent:"Nina Jacobson",
       glavneUloge: "Jennifer Lawrence, Josh Hutcherson, and Liam Hemsworth",
       zanr: "Dystopian science fiction",
+      lista: 0
     },
     {
       id:8,
@@ -81,20 +91,38 @@ function App() {
       producent:"Lucy Fisher",
       glavneUloge: "Shailene Woodley, Theo James, and Kate Winslet",
       zanr: "Dystopian science fiction",
+      lista: 0
     },
 
 
 
   ]);
 
+  const [krterijumPretrage,setKriterijumPretrage]=useState("");
+
+  function pretrazi(kriterijum){
+    setKriterijumPretrage(kriterijum);
+  }
+
+  function dodaj(id){
+    for(var i=0;i<sviFilmovi.length;i++){
+      if(sviFilmovi[i].id==id){
+        sviFilmovi[i].lista=1;
+      }
+    }
+    var niz = sviFilmovi.filter((film)=>film.lista==1);
+    setListaF(niz);
+  }
+
   return (
     <div>
     <BrowserRouter>
-        <NavBar></NavBar>
+        <NavBar pretrazi={pretrazi} ></NavBar>
         <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/onama" element={<ONama></ONama>}></Route>
-            <Route path="/filmovi" element={<Filmovi  filmovi={sviFilmovi}></Filmovi>}></Route>
+            <Route path="/filmovi" element={<Filmovi kriterijum={krterijumPretrage} filmovi={sviFilmovi} dodaj={dodaj}></Filmovi>}></Route>
+            <Route path="/listaGledanja" element={<ListaGledanja kriterijum={krterijumPretrage}  filmovi={listaFilmova}></ListaGledanja>}></Route>
           </Routes>
      </BrowserRouter>
      <Footer></Footer>

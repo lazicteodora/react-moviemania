@@ -311,6 +311,7 @@ h4{
     inline-size: 400px;
     overflow: hidden;
     background-color: #ecb9cd;
+    padding-bottom: 20px;
 
   }
 
@@ -344,3 +345,21 @@ h4{
 
 
   /*kasnije dodati jos css za dugme dodaj*/
+
+  .btnDodaj{
+    transition: all .5s ease;
+    color: #610C63;
+    line-height: 1;
+    font-size: 17px;
+    background-color : rgb(240, 239, 239);
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    margin-left: 130px;
+  }
+
+  .btnDodaj:hover {
+    color: #610C63;
+    background-color: rgb(238, 129, 179);
+}
